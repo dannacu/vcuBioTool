@@ -1,0 +1,48 @@
+The program vcubiotool is designed to assist in the processing and analysis of bioinformatics data.
+
+Designed by:
+Catalin Dan Nacu
+
+For an Independant Study
+with the Department of Biology at
+Virginia Commonwealth University
+
+This file was created: 09/29/2016
+Last Updated: 09/29/2016
+
+STRUCTURE:
+    ./root/
+    ./biotool.py
+        
+    ./setup.py
+        Tests if dependancies are installed, installs them if not. Creates bash shortcut for program.
+    ./LICENSE
+    ./requirements.txt
+    ./documentation.md
+    ./README.md
+    ./tests/
+
+
+DEPENDENCIES:
+- Cap3
+- Command-line BLAST
+- matplotlib
+- another tool for generating phylogenetic trees
+
+CLASSES:
+genomic_data class
+    - Contains the type of data held, (DNA, RNA, Protein)
+    - The number of sequences in the data file
+    - Path to the data file
+
+PACKAGES:
+    ./process_data/
+        run_Cap3.py
+        run_BLAST.py
+        make_single-fasta.py
+        make_single_fastq.py
+    ./analyze_data/
+        make_PCoa.py
+        make_PCA.py
+        make_NMDS.py
+        make_tree.py
